@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #102033;
+  background: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Inter, sans-serif;
+}
+
+button,
+a,
+input,
+textarea {
+  outline-color: #0d6efd;
+}
+
+img {
+  max-width: 100%;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-navy px-5 py-3 text-sm font-bold text-white shadow-soft transition duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center gap-2 rounded-lg px-5 py-3 text-sm font-bold ring-1 ring-primary/20 transition duration-200 hover:-translate-y-0.5;
+  }
+
+  .icon-button {
+    @apply grid h-11 w-11 place-items-center rounded-lg text-lg transition duration-200 hover:-translate-y-0.5;
+  }
+
+  .nav-link {
+    @apply rounded-lg px-3 py-2 text-sm font-bold transition;
+  }
+
+  .eyebrow {
+    @apply mb-3 text-sm font-extrabold uppercase tracking-[0.18em] text-primary;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl font-extrabold leading-tight text-navy sm:text-4xl;
+  }
+
+  .section-text {
+    @apply mt-4 text-base leading-8 text-slate-600;
+  }
+
+  .feature-card {
+    @apply rounded-lg border border-slate-200 bg-white p-6 shadow-soft transition duration-200 hover:-translate-y-1;
+  }
+
+  .footer-title {
+    @apply mb-4 font-heading text-lg font-bold text-white;
+  }
+
+  .footer-link {
+    @apply text-sm text-sky-100 transition hover:text-white;
+  }
+
+  .footer-contact {
+    @apply mb-3 flex items-start gap-3 text-sm leading-6 text-sky-100;
+  }
+
+  .form-input {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-ink shadow-sm transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+}
+
+.loader {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.loader::after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 4px solid #eaf5ff;
+  border-top-color: #0d6efd;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
