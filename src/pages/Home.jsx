@@ -5,7 +5,7 @@ import Layout from "../components/Layout.jsx";
 import { Band, SectionHeader } from "../components/Section.jsx";
 import { services, testimonials, whyChoose } from "../data/site.js";
 
-const heroImage = "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1800&q=82";
+const heroImage = "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1800&q=82";
 
 export default function Home() {
   return (
